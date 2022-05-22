@@ -1,3 +1,14 @@
+let app = new Vue({
+
+    el: '#root',
+    data: {
+
+    },
+    methods: {
+
+    },
+})
+
 const images = [
     {
         src: 'img/01.jpg',
