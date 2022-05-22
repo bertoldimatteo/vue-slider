@@ -3,6 +3,7 @@ let app = new Vue({
     el: '#root',
     data: {
         count: 0,
+        timer: 0,
         images: [
             {
                 src: 'img/01.jpg',
@@ -46,8 +47,23 @@ let app = new Vue({
                 this.count ++
             }
         },
+        nextSlide: function() {
+            this.count ++;
+            if (this.count === this.images.length - 1)
+             this.count = 0;
+        },
+        play: function() {
+            let app = this;
+            this.timer = setInterval(function() {
+              app.nextSlide();
+            }, 3000);
+        }
     },
+    created: function() {
+        this.play();
+      }
 })
+
 
 // Partendo dal markup HTML allegato creare uno slider di immagini in VueJS.
 // Bonus:
