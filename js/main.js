@@ -2,6 +2,7 @@ let app = new Vue({
 
     el: '#root',
     data: {
+        count: 0,
         images: [
             {
                 src: 'img/01.jpg',
