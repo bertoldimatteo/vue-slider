@@ -14,20 +14,20 @@
             <div class="item active">
                 <img :src="images[count].src" alt="">
                 <div class="text">
-                    <h3>Lorem</h3>
+                    <h3>{{images[count].title}}</h3>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.</p>
                 </div>
             </div> 
            
         </div>
         <div class="thumbs">
-            <div class="prev"></div>
+            <div class="prev" @click="prevImage()"></div>
 
             <div v-for="obj in images" class="thumb">
                 <img :src="obj.src" alt="">
             </div> 
             
-            <div class="next"></div>
+            <div class="next" @click="nextImage()"></div>
         </div>
    </div>
 

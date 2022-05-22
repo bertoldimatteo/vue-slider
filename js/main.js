@@ -32,7 +32,20 @@ let app = new Vue({
         ],
     },
     methods: {
-
+        prevImage(){
+            if (this.count === 0){
+                this.count = this.images.length - 1
+            }else {
+                this.count --;
+            }             
+        },
+        nextImage(){
+            if (this.count === this.images.length - 1){
+                this.count = 0;
+            } else {
+                this.count ++
+            }
+        },
     },
 })
 
