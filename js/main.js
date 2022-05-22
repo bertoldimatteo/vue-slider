@@ -4,6 +4,7 @@ let app = new Vue({
     data: {
         count: 0,
         timer: 0,
+        hover: false,
         images: [
             {
                 src: 'img/01.jpg',
@@ -57,7 +58,7 @@ let app = new Vue({
             this.timer = setInterval(function() {
               app.nextSlide();
             }, 3000);
-        }
+        },        
     },
     created: function() {
         this.play();
